@@ -1,0 +1,9 @@
+//Minus operator Hello
+x = 5;
+y = -5; //normal
+z =-5; //adjacent to other token, unary
+a = x-5; //adjacent binary
+b = x + -5; //adding to unary
+c = -5 *y; //idk left side
+c - 5 == a; //spaced binary
+b -5- 2; //you can do so much

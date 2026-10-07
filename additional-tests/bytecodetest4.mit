@@ -1,0 +1,19 @@
+// Test 4: Large record creation and manipulation
+// Tests record allocation, field access, and GC pressure
+
+data = {
+    name: "test",
+    value: 42,
+    nested: {inner: 100}
+};
+data.list = {a: 1, b: 2, c: 3, d: 4, e: 5};
+print(data.value);
+print(data.nested.inner);
+print(data.list.c);
+// Create more records to trigger GC
+i = 0;
+while (i < 50) {
+    temp = {id: i, data: {x: i, y: i * 2}};
+    i = i + 1;
+}
+print(data.value);

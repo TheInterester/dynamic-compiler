@@ -1,0 +1,9 @@
+//returning functions
+addX = fun(x) {
+    func = fun(y) {
+        return x + y;
+    };
+    return func;
+};
+add5 = addX(5);
+print(add5(intcast(input())));

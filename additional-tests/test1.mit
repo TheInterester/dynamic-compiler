@@ -1,0 +1,2 @@
+//This is a comment!;
+x = 5; //They should not appear as lexed things

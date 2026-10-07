@@ -1,0 +1,12 @@
+// Test 2: Recursive function with GC stress
+// Tests function calls, closures, and memory management
+
+factorial = fun(n) {
+    if (n <= 1) {
+        return 1;
+    }
+    result = n * factorial(n - 1);
+    return result;
+};
+print(factorial(5));
+print(factorial(10));

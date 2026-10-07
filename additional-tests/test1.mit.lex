@@ -1,0 +1,7 @@
+3 IDENTIFIER x
+3 =
+3 INTLITERAL 5
+3 ;
+4 return
+4 STRINGLITERAL "Hello"
+4 ;

@@ -1,0 +1,10 @@
+//Precedence checking
+print(5+5*10); //55
+print(7-12+3); //-2
+print(4/2*8); //16
+print(3 + -2); //1
+print(-2 + 3); //1
+print(-4 * -4); //16
+print(true & false | true & true ); //true wait these are associative they dont need different precedence (yet)
+print(5 == 6 & 3 > 2); //false, no error
+print(2 + 2 >= 4); //true 

@@ -1,0 +1,46 @@
+//Globals
+
+x = 0;
+str = "";
+increment = fun() {
+    global x;
+    x = x+1;
+};
+add = fun(y) {
+    i = 0;
+    while (i < y) {
+        increment();
+        i = i+1;
+    }
+};
+mul = fun(y) {
+    global x;
+    i = 0;
+    oldx = x;
+    while (i < (y-1)) {
+        add(oldx);
+        i = i+1;
+    }
+};
+
+//And string addition, why not
+strappend = fun(s) {
+    global str;
+    str = str + s;
+};
+strprepend = fun(s) {
+    global str;
+    str = s + str;
+};
+
+print(x); //0
+add(30);
+print(x); //30
+mul(5);
+print(x); //150
+
+print(str); //empty
+strappend("Hello World");
+print(str); //Hello World
+strprepend(x);
+print(str); //150HelloWorld

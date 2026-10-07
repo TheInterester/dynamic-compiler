@@ -1,0 +1,9 @@
+//Basic function test
+z = fun(x, y) {
+    if (true) {
+    return x + y;
+    print("Should not reach"); //early out test
+    }
+    print("Also should not reach here"); //more test
+};
+print(z(6, 7));

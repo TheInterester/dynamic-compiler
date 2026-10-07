@@ -1,0 +1,26 @@
+// Test 7: Complex control flow with loops and conditionals
+// Tests bytecode generation for control flow and VM execution
+
+sum = 0;
+i = 1;
+while (i <= 10) {
+    if (i > 5) {
+        sum = sum + (i * 2);
+    } else {
+        sum = sum + i;
+    }
+    i = i + 1;
+}
+print(sum);
+// Nested loops
+total = 0;
+x = 0;
+while (x < 5) {
+    y = 0;
+    while (y < 5) {
+        total = total + 1;
+        y = y + 1;
+    }
+    x = x + 1;
+}
+print(total);

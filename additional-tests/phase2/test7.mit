@@ -1,0 +1,16 @@
+//Records
+x = { onething: "idkwhy"; TryEffort: 210; matters: false; idkwhy: "simplify"; };
+y = { distanceTraveled: 1000; theend: "it doesn't even matter"; };
+x.y = y;
+print(x.TryEffort); //210
+x.TryEffort = 220;
+print(x.TryEffort); //220
+print(x[x.onething]); //"simplify"?
+print(x.y.distanceTraveled);
+print(y);
+print(x);
+if (input() == "1") { 
+print(y.x.distanceTraveled); //IllegalCastException
+} else {
+    print(y[x]);
+}

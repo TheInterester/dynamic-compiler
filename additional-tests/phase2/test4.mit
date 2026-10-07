@@ -1,0 +1,9 @@
+//non-returning functions and calls in function definitions
+count = fun(x) {
+    i = 0;
+    while (i < x ) {
+        print(i);
+        i = i + 1;
+    }
+};
+count(6);

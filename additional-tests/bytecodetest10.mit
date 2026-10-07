@@ -1,0 +1,46 @@
+// Test 10: Comprehensive integration test
+// Tests all features together: functions, closures, records, loops, GC
+
+fibonacci = fun(n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+};
+
+// Test with various inputs
+print(fibonacci(7));
+
+// Create complex data structure
+data = {
+    fib: fibonacci,
+    cache: {},
+    compute: fun(n) {
+        if (data.cache[n] == None) {
+            data.cache[n] = data.fib(n);
+        }
+        return data.cache[n];
+    }
+};
+
+// Use cached fibonacci
+i = 0;
+while (i < 10) {
+    result = data.compute(i);
+    i = i + 1;
+}
+print(data.cache[9]);
+
+// Stress test with many allocations
+counter = 0;
+while (counter < 50) {
+    tempData = {
+        id: counter,
+        nested: {value: counter * 2},
+        func: fun(x) { return x + counter; }
+    };
+    counter = counter + 1;
+}
+
+// Verify data still works after GC
+print(data.compute(8));

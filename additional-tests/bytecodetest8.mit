@@ -1,0 +1,26 @@
+// Test 8: Array-like record operations with GC pressure
+// Tests dynamic indexing, record growth, and memory management
+
+arr = {};
+i = 0;
+while (i < 20) {
+    arr[i] = i * i;
+    i = i + 1;
+}
+// Access elements
+print(arr[5]);
+print(arr[10]);
+print(arr[15]);
+// Create more arrays to trigger GC
+j = 0;
+while (j < 30) {
+    temp = {};
+    k = 0;
+    while (k < 10) {
+        temp[k] = j + k;
+        k = k + 1;
+    }
+    j = j + 1;
+}
+// Verify original array still accessible after GC
+print(arr[5]);

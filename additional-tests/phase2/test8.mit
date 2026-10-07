@@ -1,0 +1,19 @@
+//redefining builtins
+x = "Hello World";
+print(x); //Hello World
+oldprint = print;
+k = print;
+k("checking 1");
+print = fun(x){
+    oldprint("Edit: " + x);
+};
+print(x); //Edit: Hello World
+k("checking");
+oldprint(print == oldprint); //false
+z = oldprint;
+k(z);
+print(z == oldprint); //Edit: true
+k(z);
+z(k);
+z = k;
+z(k);

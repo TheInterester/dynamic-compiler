@@ -1,0 +1,17 @@
+// Test 6: String operations and memory stress
+// Tests string concatenation, comparison, and GC of string objects
+
+s1 = "Hello";
+s2 = " World";
+s3 = s1 + s2;
+print(s3);
+// Create many strings to stress GC
+counter = 0;
+while (counter < 100) {
+    temp = "String" + "Number";
+    counter = counter + 1;
+}
+// Verify strings still work after GC
+print(s1 + s2);
+result = s1 == "Hello";
+print(result);

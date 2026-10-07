@@ -1,0 +1,17 @@
+// Test 3: Nested closures with captured variables
+// Tests closure creation, variable capture, and GC of closures
+
+makeCounter = fun() {
+    count = 0;
+    increment = fun() {
+        count = count + 1;
+        return count;
+    };
+    return increment;
+};
+counter1 = makeCounter();
+counter2 = makeCounter();
+print(counter1());
+print(counter1());
+print(counter2());
+print(counter1());

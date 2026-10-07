@@ -1,0 +1,5 @@
+// Simple test for peephole optimization
+x = 5;
+y = 0 + x;  // Should optimize away the + 0
+z = x * 1;  // Should optimize away the * 1
+w = 0 * y;  // Should optimize to LoadConst 0

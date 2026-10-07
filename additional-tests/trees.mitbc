@@ -1,0 +1,607 @@
+function
+{
+	functions =
+	[
+		function
+		{
+			functions = [],
+			constants = [],
+			parameter_count = 1,
+			local_vars = [],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [],
+			instructions = 
+			[
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [],
+			parameter_count = 0,
+			local_vars = [],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [],
+			instructions = 
+			[
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [],
+			parameter_count = 1,
+			local_vars = [],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [],
+			instructions = 
+			[
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [None, 1, 0],
+			parameter_count = 2,
+			local_vars = [base, exp, i, result],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [],
+			instructions = 
+			[
+				load_const	0
+				store_local	2
+				load_const	0
+				store_local	3
+				load_const	1
+				store_local	3
+				load_const	2
+				store_local	2
+				load_local	2
+				load_local	1
+				swap
+				gt
+				not
+				if	10
+				load_local	3
+				load_local	0
+				mul
+				store_local	3
+				load_local	2
+				load_const	1
+				add
+				store_local	2
+				goto	-14
+				load_local	3
+				return
+				load_const	0
+				return
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [None],
+			parameter_count = 2,
+			local_vars = [a, b],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [],
+			instructions = 
+			[
+				load_local	0
+				load_local	1
+				gt
+				not
+				if	4
+				load_local	0
+				return
+				goto	3
+				load_local	1
+				return
+				load_const	0
+				return
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [None, 0, 1],
+			parameter_count = 1,
+			local_vars = [d, left, right],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [make_tree, left, right],
+			instructions = 
+			[
+				load_const	0
+				store_local	1
+				load_const	0
+				store_local	2
+				load_local	0
+				load_const	1
+				gt
+				not
+				if	22
+				load_local	0
+				load_const	2
+				sub
+				store_local	0
+				load_global	0
+				load_local	0
+				call	1
+				store_local	1
+				load_global	0
+				load_local	0
+				call	1
+				store_local	2
+				alloc_record
+				dup
+				load_local	1
+				field_store	1
+				dup
+				load_local	2
+				field_store	2
+				return
+				goto	9
+				alloc_record
+				dup
+				load_const	0
+				field_store	1
+				dup
+				load_const	0
+				field_store	2
+				return
+				load_const	0
+				return
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [None, 1],
+			parameter_count = 1,
+			local_vars = [node, l, r],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [left, right, check_tree],
+			instructions = 
+			[
+				load_const	0
+				store_local	1
+				load_const	0
+				store_local	2
+				load_local	0
+				field_load	0
+				store_local	1
+				load_local	0
+				field_load	1
+				store_local	2
+				load_local	1
+				load_const	0
+				eq
+				not
+				if	4
+				load_const	1
+				return
+				goto	11
+				load_const	1
+				load_global	2
+				load_local	1
+				call	1
+				add
+				load_global	2
+				load_local	2
+				call	1
+				add
+				return
+				load_const	0
+				return
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [None],
+			parameter_count = 1,
+			local_vars = [itde, d, i, tree],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [i, d, make_tree, check_tree],
+			instructions = 
+			[
+				load_const	0
+				store_local	1
+				load_const	0
+				store_local	2
+				load_const	0
+				store_local	3
+				load_local	0
+				field_load	0
+				store_local	2
+				load_local	0
+				field_load	1
+				store_local	1
+				load_global	2
+				load_local	1
+				call	1
+				store_local	3
+				load_global	3
+				load_local	3
+				call	1
+				return
+				load_const	0
+				return
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [None, 0, 1],
+			parameter_count = 3,
+			local_vars = [i, d, chunksize, chunk, chunk_idx, chunk_len, chunks, k],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [i, d, length],
+			instructions = 
+			[
+				load_const	0
+				store_local	3
+				load_const	0
+				store_local	4
+				load_const	0
+				store_local	5
+				load_const	0
+				store_local	6
+				load_const	0
+				store_local	7
+				alloc_record
+				store_local	6
+				load_const	1
+				store_local	4
+				alloc_record
+				store_local	3
+				load_const	1
+				store_local	5
+				load_const	2
+				store_local	7
+				load_local	7
+				load_local	0
+				swap
+				geq
+				not
+				if	40
+				load_local	3
+				load_local	5
+				alloc_record
+				dup
+				load_local	7
+				field_store	0
+				dup
+				load_local	1
+				field_store	1
+				index_store
+				load_local	5
+				load_const	2
+				add
+				store_local	5
+				load_local	5
+				load_local	2
+				eq
+				not
+				if	16
+				load_local	3
+				load_local	5
+				field_store	2
+				load_local	6
+				load_local	4
+				load_local	3
+				index_store
+				load_local	4
+				load_const	2
+				add
+				store_local	4
+				alloc_record
+				store_local	3
+				load_const	1
+				store_local	5
+				load_local	7
+				load_const	2
+				add
+				store_local	7
+				goto	-44
+				load_local	5
+				load_const	1
+				gt
+				not
+				if	12
+				load_local	3
+				load_local	5
+				field_store	2
+				load_local	6
+				load_local	4
+				load_local	3
+				index_store
+				load_local	4
+				load_const	2
+				add
+				store_local	4
+				load_local	6
+				load_local	4
+				field_store	2
+				load_local	6
+				return
+				load_const	0
+				return
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [None, 0, 1],
+			parameter_count = 1,
+			local_vars = [chunk, idx, itde, result, total],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [length, make_check],
+			instructions = 
+			[
+				load_const	0
+				store_local	1
+				load_const	0
+				store_local	2
+				load_const	0
+				store_local	3
+				load_const	0
+				store_local	4
+				load_const	1
+				store_local	4
+				load_const	1
+				store_local	1
+				load_local	1
+				load_local	0
+				field_load	0
+				swap
+				gt
+				not
+				if	18
+				load_local	0
+				load_local	1
+				index_load
+				store_local	2
+				load_global	1
+				load_local	2
+				call	1
+				store_local	3
+				load_local	4
+				load_local	3
+				add
+				store_local	4
+				load_local	1
+				load_const	2
+				add
+				store_local	1
+				goto	-23
+				load_local	4
+				return
+				load_const	0
+				return
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [None, 2, 1, 0, "stretch tree of depth ", "\t check: ", 5000, "\t trees of depth ", "long lived tree of depth "],
+			parameter_count = 2,
+			local_vars = [n, min_depth, chunk, chunk_idx, chunks, cs, d, i, long_check, long_lived_tree, max_depth, mmd, stretch_check, stretch_depth, stretch_itde],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [max, i, d, make_check, print, make_tree, power, get_argchunks, length, sum_map, check_tree],
+			instructions = 
+			[
+				load_const	0
+				store_local	2
+				load_const	0
+				store_local	3
+				load_const	0
+				store_local	4
+				load_const	0
+				store_local	5
+				load_const	0
+				store_local	6
+				load_const	0
+				store_local	7
+				load_const	0
+				store_local	8
+				load_const	0
+				store_local	9
+				load_const	0
+				store_local	10
+				load_const	0
+				store_local	11
+				load_const	0
+				store_local	12
+				load_const	0
+				store_local	13
+				load_const	0
+				store_local	14
+				load_global	0
+				load_local	1
+				load_const	1
+				add
+				load_local	0
+				call	2
+				store_local	10
+				load_local	10
+				load_const	2
+				add
+				store_local	13
+				alloc_record
+				dup
+				load_const	3
+				field_store	1
+				dup
+				load_local	13
+				field_store	2
+				store_local	14
+				load_global	3
+				load_local	14
+				call	1
+				store_local	12
+				load_global	4
+				load_const	4
+				load_local	13
+				add
+				load_const	5
+				add
+				load_local	12
+				add
+				call	1
+				pop
+				load_global	5
+				load_local	10
+				call	1
+				store_local	9
+				load_local	10
+				load_local	1
+				add
+				store_local	11
+				load_local	1
+				store_local	6
+				load_local	6
+				load_local	13
+				swap
+				gt
+				not
+				if	57
+				load_global	6
+				load_const	1
+				load_local	11
+				load_local	6
+				sub
+				call	2
+				store_local	7
+				load_const	3
+				store_local	5
+				load_global	7
+				load_local	7
+				load_local	6
+				load_const	6
+				call	3
+				store_local	4
+				load_const	3
+				store_local	3
+				load_local	3
+				load_local	4
+				field_load	8
+				swap
+				gt
+				not
+				if	16
+				load_local	4
+				load_local	3
+				index_load
+				store_local	2
+				load_local	5
+				load_global	9
+				load_local	2
+				call	1
+				add
+				store_local	5
+				load_local	3
+				load_const	2
+				add
+				store_local	3
+				goto	-21
+				load_global	4
+				load_local	7
+				load_const	7
+				add
+				load_local	6
+				add
+				load_const	5
+				add
+				load_local	5
+				add
+				call	1
+				pop
+				load_local	6
+				load_const	1
+				add
+				store_local	6
+				goto	-61
+				load_global	10
+				load_local	9
+				call	1
+				store_local	8
+				load_global	4
+				load_const	8
+				load_local	10
+				add
+				load_const	5
+				add
+				load_local	8
+				add
+				call	1
+				pop
+				load_const	0
+				return
+			]
+		}
+	],
+	constants = [4],
+	parameter_count = 0,
+	local_vars = [],
+	local_ref_vars = [],
+	free_vars = [],
+	names = [check_tree, get_argchunks, main, make_check, make_tree, max, n, power, sum_map, print, input, intcast],
+	instructions = 
+	[
+		load_func	0
+		alloc_closure	0
+		store_global	9
+		load_func	1
+		alloc_closure	0
+		store_global	10
+		load_func	2
+		alloc_closure	0
+		store_global	11
+		load_func	3
+		alloc_closure	0
+		store_global	7
+		load_func	4
+		alloc_closure	0
+		store_global	5
+		load_func	5
+		alloc_closure	0
+		store_global	4
+		load_func	6
+		alloc_closure	0
+		store_global	0
+		load_func	7
+		alloc_closure	0
+		store_global	3
+		load_func	8
+		alloc_closure	0
+		store_global	1
+		load_func	9
+		alloc_closure	0
+		store_global	8
+		load_func	10
+		alloc_closure	0
+		store_global	2
+		load_global	11
+		load_global	10
+		call	0
+		call	1
+		store_global	6
+		load_global	2
+		load_global	6
+		load_const	0
+		call	2
+		pop
+	]
+}

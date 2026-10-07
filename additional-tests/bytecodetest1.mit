@@ -1,0 +1,9 @@
+// Test 1: Memory allocation stress test - forces GC to run
+// Creates many temporary objects to test garbage collection
+
+x = 0;
+while (x < 100) {
+    temp = {value: x;};
+    x = x + 1;
+}
+print(x);

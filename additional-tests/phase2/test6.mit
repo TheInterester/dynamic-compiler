@@ -1,0 +1,17 @@
+//Error test suite. Select test w/ inputs from 1
+errorTest = fun(x) {
+    if (x == 1) {
+        return 5 / 0; //divide by 0
+    } else { 
+        if (x == 2) {
+            return none * 3; //illegal binop
+        }
+    }
+    if (x == 3) {
+        y = z; //UninitializedVariableException
+    }
+    if (x == 4) {
+        print(1, 2); //runtimeerror on arguments
+    }
+};
+errorTest(intcast(input()));

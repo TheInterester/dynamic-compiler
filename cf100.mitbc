@@ -1,0 +1,263 @@
+function
+{
+	functions =
+	[
+		function
+		{
+			functions = [],
+			constants = [],
+			parameter_count = 1,
+			local_vars = [],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [],
+			instructions = 
+			[
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [],
+			parameter_count = 0,
+			local_vars = [],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [],
+			instructions = 
+			[
+			]
+		},
+		function
+		{
+			functions = [],
+			constants = [],
+			parameter_count = 1,
+			local_vars = [],
+			local_ref_vars = [],
+			free_vars = [],
+			names = [],
+			instructions = 
+			[
+			]
+		}
+	],
+	constants = [1212228441, -1431679229, 1574928439, -602193, -378154243, -1289667882, 1123153944, 29513802, -344385835, 1077939486, -3470767, -1918885222, -2064749037, 91886761, 1686232256, 2026253903, -484959688, 541064785, -1997869156, 69947188, 38764980, 1650512611, -1364425913, 2044064167, 187639208, 855428142, -1633531437, -844862824, -911298331, 1290279347, -728210076, -1593531944, 1219605047, -501607517, -936606782, 1956019521, 593471827, -1557462338, -1878986657, -1087317777, -861671841, 1677126711, -849325046, 909214942, -899918960, -1594003495, 419105120, 124087330, 682836390, 751367047, -1344582430, 845084100, 43998436, 381227365, -1584719928, -22597424, 553730314, 1807694658, -1330401866, 1055659114, -516025177, 129406344, -7842793, -1389728880, 1445536453, 1191881705, 190361186, 1117044437, -2014449888, 1355179217, 1326847710, 382870164, 1853404, -971832024, 2232712, 652710610, -1536397317, -1541956745, -2097215376, 322671037, -592408941, 11983550, 282633166, 982161751, -15816670, -272051053, -2115548981, 1910412801, 42653950, -1864855871, -10096982, -1786359196, 355560035, 72257018, -1178054358, 895884118, -1077986173, -1627686353, -648818449, 1701532671],
+	parameter_count = 0,
+	local_vars = [],
+	local_ref_vars = [],
+	free_vars = [],
+	names = [x0, x1, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x2, x20, x21, x22, x23, x24, x25, x26, x27, x28, x29, x3, x30, x31, x32, x33, x34, x35, x36, x37, x38, x39, x4, x40, x41, x42, x43, x44, x45, x46, x47, x48, x49, x5, x50, x51, x52, x53, x54, x55, x56, x57, x58, x59, x6, x60, x61, x62, x63, x64, x65, x66, x67, x68, x69, x7, x70, x71, x72, x73, x74, x75, x76, x77, x78, x79, x8, x80, x81, x82, x83, x84, x85, x86, x87, x88, x89, x9, x90, x91, x92, x93, x94, x95, x96, x97, x98, x99, print, input, intcast],
+	instructions = 
+	[
+		load_func	0
+		alloc_closure	0
+		store_global	100
+		load_func	1
+		alloc_closure	0
+		store_global	101
+		load_func	2
+		alloc_closure	0
+		store_global	102
+		load_const	0
+		store_global	0
+		load_const	1
+		store_global	1
+		load_const	2
+		store_global	12
+		load_const	3
+		store_global	23
+		load_const	4
+		store_global	34
+		load_const	5
+		store_global	45
+		load_const	6
+		store_global	56
+		load_const	7
+		store_global	67
+		load_const	8
+		store_global	78
+		load_const	9
+		store_global	89
+		load_const	10
+		store_global	2
+		load_const	11
+		store_global	3
+		load_const	12
+		store_global	4
+		load_const	13
+		store_global	5
+		load_const	14
+		store_global	6
+		load_const	15
+		store_global	7
+		load_const	16
+		store_global	8
+		load_const	17
+		store_global	9
+		load_const	18
+		store_global	10
+		load_const	19
+		store_global	11
+		load_const	20
+		store_global	13
+		load_const	21
+		store_global	14
+		load_const	22
+		store_global	15
+		load_const	23
+		store_global	16
+		load_const	24
+		store_global	17
+		load_const	25
+		store_global	18
+		load_const	26
+		store_global	19
+		load_const	27
+		store_global	20
+		load_const	28
+		store_global	21
+		load_const	29
+		store_global	22
+		load_const	30
+		store_global	24
+		load_const	31
+		store_global	25
+		load_const	32
+		store_global	26
+		load_const	33
+		store_global	27
+		load_const	34
+		store_global	28
+		load_const	35
+		store_global	29
+		load_const	36
+		store_global	30
+		load_const	37
+		store_global	31
+		load_const	38
+		store_global	32
+		load_const	39
+		store_global	33
+		load_const	40
+		store_global	35
+		load_const	41
+		store_global	36
+		load_const	42
+		store_global	37
+		load_const	43
+		store_global	38
+		load_const	44
+		store_global	39
+		load_const	45
+		store_global	40
+		load_const	46
+		store_global	41
+		load_const	47
+		store_global	42
+		load_const	48
+		store_global	43
+		load_const	49
+		store_global	44
+		load_const	50
+		store_global	46
+		load_const	51
+		store_global	47
+		load_const	52
+		store_global	48
+		load_const	53
+		store_global	49
+		load_const	54
+		store_global	50
+		load_const	55
+		store_global	51
+		load_const	56
+		store_global	52
+		load_const	57
+		store_global	53
+		load_const	58
+		store_global	54
+		load_const	59
+		store_global	55
+		load_const	60
+		store_global	57
+		load_const	61
+		store_global	58
+		load_const	62
+		store_global	59
+		load_const	63
+		store_global	60
+		load_const	64
+		store_global	61
+		load_const	65
+		store_global	62
+		load_const	66
+		store_global	63
+		load_const	67
+		store_global	64
+		load_const	68
+		store_global	65
+		load_const	69
+		store_global	66
+		load_const	70
+		store_global	68
+		load_const	71
+		store_global	69
+		load_const	72
+		store_global	70
+		load_const	73
+		store_global	71
+		load_const	74
+		store_global	72
+		load_const	75
+		store_global	73
+		load_const	76
+		store_global	74
+		load_const	77
+		store_global	75
+		load_const	78
+		store_global	76
+		load_const	79
+		store_global	77
+		load_const	80
+		store_global	79
+		load_const	81
+		store_global	80
+		load_const	82
+		store_global	81
+		load_const	83
+		store_global	82
+		load_const	84
+		store_global	83
+		load_const	85
+		store_global	84
+		load_const	86
+		store_global	85
+		load_const	87
+		store_global	86
+		load_const	88
+		store_global	87
+		load_const	89
+		store_global	88
+		load_const	90
+		store_global	90
+		load_const	91
+		store_global	91
+		load_const	92
+		store_global	92
+		load_const	93
+		store_global	93
+		load_const	94
+		store_global	94
+		load_const	95
+		store_global	95
+		load_const	96
+		store_global	96
+		load_const	97
+		store_global	97
+		load_const	98
+		store_global	98
+		load_const	99
+		store_global	99
+	]
+}

@@ -1,0 +1,227 @@
+// Comprehensive Edge Case Test - Simplified Version
+print("=== EDGE CASE TESTING ===");
+print("");
+
+// 1. Arithmetic
+print("1. Arithmetic:");
+print("  5 + 3 = " + (5 + 3));
+print("  10 - 7 = " + (10 - 7));
+print("  4 * 6 = " + (4 * 6));
+print("  20 / 4 = " + (20 / 4));
+print("  -5 + 3 = " + (-5 + 3));
+
+// 2. Strings
+print("");
+print("2. Strings:");
+print("  Empty: " + "");
+print("  Int: " + ("val=" + 42));
+print("  Bool: " + ("flag=" + true));
+print("  None: " + ("result=" + None));
+
+// 3. Booleans
+print("");
+print("3. Booleans:");
+print("  true & true = " + (true & true));
+print("  true & false = " + (true & false));
+print("  false | false = " + (false | false));
+print("  !true = " + (!true));
+
+// 4. Comparisons
+print("");
+print("4. Comparisons:");
+print("  5 == 5: " + (5 == 5));
+print("  5 == 6: " + (5 == 6));
+print("  10 > 5: " + (10 > 5));
+print("  5 >= 5: " + (5 >= 5));
+
+// 5. Records
+print("");
+print("5. Records:");
+rec = { x: 10 };
+rec.y = 20;
+print("  rec.x = " + rec.x);
+print("  rec.missing = " + rec.missing);
+arr = {};
+arr[0] = "first";
+arr[1] = "second";
+print("  arr[0] = " + arr[0]);
+
+// 6. Functions
+print("");
+print("6. Functions:");
+add = fun(a, b) { return a + b; };
+print("  add(3, 4) = " + add(3, 4));
+
+fact = fun(n) {
+  if(n <= 1) { return 1; };
+  return n * fact(n - 1);
+};
+print("  factorial(5) = " + fact(5));
+
+// 7. Closures
+print("");
+print("7. Closures:");
+makeCounter = fun() {
+  c = 0;
+  return fun() { c = c + 1; return c; };
+};
+ctr = makeCounter();
+print("  counter: " + ctr());
+print("  counter: " + ctr());
+print("  counter: " + ctr());
+
+makeAdder = fun(x) {
+  return fun(y) { return x + y; };
+};
+add5 = makeAdder(5);
+print("  add5(3) = " + add5(3));
+
+// 8. Nested closures
+print("");
+print("8. Nested Closures:");
+makeMul = fun(x) {
+  return fun(y) {
+    return fun(z) {
+      return x * y * z;
+    };
+  };
+};
+mul = makeMul(2)(3);
+print("  mul(4) = " + mul(4));
+
+// 9. Closure with record
+print("");
+print("9. Closure + Record:");
+makeObj = fun(name) {
+  obj = {
+    get: fun() { return name; };
+    set: fun(n) { name = n; };
+  };
+  return obj;
+};
+o = makeObj("Alice");
+print("  name: " + o.get());
+o.set("Bob");
+print("  updated: " + o.get());
+
+// 10. Control flow
+print("");
+print("10. Control Flow:");
+x = 5;
+if(x > 3) {
+  if(x > 4) {
+    print("  nested if works");
+  };
+};
+
+findSqrt = fun(n) {
+  i = 0;
+  while(i < 100) {
+    if(i * i > n) { return i; };
+    i = i + 1;
+  };
+  return -1;
+};
+print("  sqrt(50) > " + findSqrt(50));
+
+// 11. Variable scoping
+print("");
+print("11. Scoping:");
+g = "global";
+test = fun() {
+  loc = "local";
+  print("  local: " + loc);
+  print("  global: " + g);
+};
+test();
+
+// 12. GC stress test
+print("");
+print("12. GC Stress:");
+createMany = fun(n) {
+  i = 0;
+  while(i < n) {
+    temp = { val: i; nested: { inner: i * 2; }; };
+    i = i + 1;
+  };
+  return n;
+};
+print("  created: " + createMany(100));
+
+// Circular references
+c1 = { name: "c1"; };
+c2 = { name: "c2"; };
+c1.ref = c2;
+c2.ref = c1;
+print("  circular refs ok");
+
+// Many closures
+cls = {};
+i = 0;
+while(i < 50) {
+  v = i;
+  cls[i] = fun() { return v * v; };
+  i = i + 1;
+};
+print("  50 closures created");
+print("  closure[5]() = " + cls[5]());
+
+// 13. Native functions
+print("");
+print("13. Native Functions:");
+print("  print(None):");
+print(None);
+print("  print(true):");
+print(true);
+print("  print(42):");
+print(42);
+print("  intcast('123'): " + intcast("123"));
+
+// 14. Complex nested structures
+print("");
+print("14. Nested Structures:");
+deep = { l1: { l2: { l3: "deep"; }; }; };
+print("  3 levels: " + deep.l1.l2.l3);
+
+List = fun(h, t) {
+  return {
+    head: fun() { return h; };
+    tail: fun() { return t; };
+  };
+};
+Nil = { empty: true; };
+list = List(1, List(2, List(3, Nil)));
+print("  list head: " + list.head());
+print("  list tail head: " + list.tail().head());
+
+// 15. None handling
+print("");
+print("15. None:");
+n = None;
+print("  None: " + n);
+print("  None == None: " + (None == None));
+r = { f: None; };
+print("  rec.field(None): " + r.f);
+
+// 16. Large computation
+print("");
+print("16. Large Computation:");
+fib = fun(n) {
+  if(n <= 1) { return n; };
+  return fib(n-1) + fib(n-2);
+};
+print("  fib(10) = " + fib(10));
+
+sumTo = fun(n) {
+  acc = 0;
+  i = 1;
+  while(i <= n) {
+    acc = acc + i;
+    i = i + 1;
+  };
+  return acc;
+};
+print("  sum(1..100) = " + sumTo(100));
+
+print("");
+print("=== ALL TESTS PASSED ===");

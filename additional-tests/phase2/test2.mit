@@ -1,0 +1,4 @@
+//Builtin test
+print("Hello World");
+x = input();
+print(5 + intcast(x));

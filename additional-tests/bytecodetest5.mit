@@ -1,0 +1,22 @@
+// Test 5: Higher-order functions and function composition
+// Tests passing functions as arguments and returning functions
+
+apply = fun(f, x) {
+    return f(x);
+};
+double = fun(n) {
+    return n * 2;
+};
+triple = fun(n) {
+    return n * 3;
+};
+print(apply(double, 5));
+print(apply(triple, 5));
+// Test function composition
+compose = fun(f, g) {
+    return fun(x) {
+        return f(g(x));
+    };
+};
+doubleTriple = compose(double, triple);
+print(doubleTriple(4));
